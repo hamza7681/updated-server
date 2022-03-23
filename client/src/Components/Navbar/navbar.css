@@ -1,0 +1,136 @@
+  .back
+  {
+      /* overflow: hidden;
+     position:fixed; 
+     top: 0;
+    width: 100%;  */
+    /* background-image: linear-gradient(to top,#0d355f 0%,#0d355f 1%,#092746 100%); */
+    color: black;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    box-shadow:0px 2px 5px 0px rgba(245, 242, 242, 0.781)
+
+  }
+  .link
+  {
+     color: black;
+     display: flex;
+     text-decoration: none;
+     align-items: center;
+     padding: 10px;
+     height: 100%;
+     cursor: pointer;
+     border-bottom: 3px solid white;
+  } 
+   .active
+  {
+    display: flex;
+     padding: 10px;
+     height: 100%;
+     cursor: pointer;
+    color: white;
+    text-decoration: none;
+    color: #fa5722;
+    border-bottom: 3px solid #fe5722;
+    cursor: pointer;
+
+  } 
+  .active:hover
+  {
+    
+    color:#fa5722;
+    cursor: pointer;
+  }
+.link:hover
+{
+    color: #fa5722;
+    border-bottom: 3px solid #fe5722;
+    cursor: pointer;
+   
+}
+.login button
+{
+  color: white;
+  background-color: #fe5722;
+  font-size: 15px;
+  align-items: center;
+  padding: 10px 12px 10px 12px;
+  height: 100%;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  transition: all .5s ease;
+ 
+
+}
+.login button:hover
+{
+  background-color: #185494;
+  transition: all .5s ease;
+ 
+
+}
+@media screen and (max-width: 768px) {
+ .link
+  {
+     justify-content: center;
+     align-items: center;
+     font-size:14px;
+    
+  } 
+ 
+.login button
+{
+  color: white;
+  background-color: #fe5722;
+  font-size: 17px;
+  padding: 10px 12px 10px 12px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: #fe5722;
+  transition: all .5s ease;
+
+}
+.link:hover
+{
+   width: 100%;
+   color: white;
+   background-color: #fa5722;
+  
+}
+.active
+{
+  display: flex;
+   padding: 12px;
+   height: 100%;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #fa5722;
+
+} 
+.active:hover
+{
+  
+  color: white;
+  cursor: pointer;
+}
+
+  
+  }
+  @media screen and (max-width: 412px) 
+  {
+.toggle
+{
+  position: fixed;
+}
+
+  }
+

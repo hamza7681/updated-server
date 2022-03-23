@@ -1,0 +1,25 @@
+.counter-container
+{
+    justify-content: center;
+    text-align: center;
+    color:#ffcc00;
+ 
+}
+.counter-back
+{
+  /* height:60vh;  */
+  margin-top: 8%;
+  padding-top: 5%;
+  background: linear-gradient(rgba(20, 75, 133, 0.795),rgba(20, 75, 133, 0.795)),url('/src/Assests/learn.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+}
+/* .Border
+{
+  width: 70%;
+  height: 20vh;
+  border:2px solid #ffcc00 ;
+  border-style: dotted;
+} */

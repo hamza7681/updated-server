@@ -1,0 +1,514 @@
+ .slide1
+ {
+  
+  height:85vh;
+  position: relative;
+  margin-top: 5%;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('/src/Assests/Home_image2.jpg');  
+  background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   background-attachment: fixed; 
+  
+ }
+ .slide2
+ {
+    height:85vh;
+    position: relative;
+    margin-top: 5%;
+   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('/src/Assests/Home_image3.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+ 
+ }
+ .slide3
+ {
+   height:85vh; 
+   position: relative;
+   margin-top: 5%;
+   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('/src/Assests/home_image1.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+
+ }
+ 
+ .heading 
+ {
+     color:white;
+     text-align: center;
+     padding-top: 370px;
+     font-size: 4rem;
+     text-transform: uppercase;
+ }
+ @media screen and (max-width: 768px) {
+
+    .slide1
+    {
+      height: 80vh;
+    }
+    .slide2
+    {
+        height: 80vh;
+    }
+    .slide3
+    {
+        height: 80vh;
+    }
+    .heading 
+    {
+      
+        padding-top: 330px;
+        font-size: 3rem;
+       
+    }
+} 
+
+ /* *{
+     margin: 0;
+     padding: 0;
+ } 
+ .poster1,.poster2,.poster3
+ {
+  width: 100%;
+  height: 90vh;
+  position: absolute; 
+ }
+ .overlay
+ {
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0,0,0,0.5);
+ }
+ .poster1
+ {
+ 
+  background-image: url('/src/Assests/img1.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: 10s fade1 infinite;
+}
+.poster2
+ {
+ 
+  background-image: url('/src/Assests/img3.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: 10s fade2 infinite;
+}
+.poster3
+ {
+ 
+  background-image: url('/src/Assests/img2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: 10s fade3 infinite;
+}
+@keyframes fade1 {
+  0%
+  {
+      opacity: 1;
+  }
+  25%
+  {
+      opacity: 0;
+  }
+  75%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      opacity: 1;
+  }
+  
+}
+@keyframes fade2 {
+  0%
+  {
+      opacity: 0;
+  }
+  25%
+  {
+      opacity: 1;
+  }
+  75%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      opacity: 0;
+  }
+  
+}
+@keyframes fade3 {
+  0%
+  {
+      opacity: 0;
+  }
+  25%
+  {
+      opacity: 0;
+  }
+  75%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      opacity: 0;
+  }
+  
+}
+ .poster1 span{
+   color: #fff;
+   font-size: 4vw;
+   text-align: center;
+   text-transform: uppercase;
+   padding: 10px;
+    position: absolute;
+   top: 60%;
+   left: 30%;
+   transform:(50%,-50%);
+   background-color: #0d355f;
+  animation: 12s text1 infinite;
+    
+ }
+ .poster2 span
+ {
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fe5522a9;
+  padding: 10px;
+ position: absolute; 
+  top: 60%;
+  left: 35%;
+  transform:(50%,-50%);
+  animation: 12s text2 infinite;
+  
+
+ }
+ .poster3 span
+ {
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fe5522a9;
+  padding: 10px;
+  position: absolute;
+  top: 60%;
+  left: 32%;
+  transform:(50%,-50%);
+  animation: 12s text3 infinite;
+ 
+ }
+ 
+ /* @-webkit-keyframes pos1{
+
+  from{top: 20%;}
+  to{right: 15%;}
+
+ }
+ @keyframes pos1
+ {
+  from{top: 20%;}
+  to{right: 15%;}
+
+ }
+ @-webkit-keyframes pos2{
+
+  from{top: 20%;}
+  to{right: 15%;}
+
+ }
+ @keyframes pos2
+ {
+  from{top: 20%;}
+  to{right: 15%;}
+
+ }
+ @-webkit-keyframes pos3{
+
+  from{top: 20%;}
+  to{right: 15%;}
+
+ }
+ @keyframes pos3
+ {
+  from{top: 20%;}
+  to{right: 15%;}
+
+ } */
+ 
+ /* @media screen and (max-width: 768px) { */
+  /* .slider
+ {
+  display: none;
+
+}  */
+/* .poster1,.poster2,.poster3
+ {
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+ }
+ .overlay
+ {
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(0,0,0,0.5);
+   }
+
+   
+ }  */
+
+
+
+/* .slide1,.slide2,.slide3
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide1
+{
+  
+    background-image: url('/src/Assests/img1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    animation: fade1 15s infinite;
+}
+.slide2
+{
+   
+  height: 100vh;
+    background-image: url('/src/Assests/img3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    animation: fade2 15s infinite;
+}
+.slide3
+{
+    height: 100vh;
+    background-image: url('/src/Assests/img2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    animation: fade3 15s infinite;
+}
+
+ 
+.text 
+{
+  margin-top: 50%;
+} */
+ 
+  /* .slider{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    background-color: aquamarine;
+
+} */
+
+/* .myslider1,.myslider2,.myslider3
+   {
+     
+       display: none;
+       overflow: hidden;
+   }
+   .myslider1 img
+   {
+       width: 100%;
+       height: 110vh;
+   }
+   .myslider2 img
+   { 
+    width: 100%;
+    height: 110vh;
+
+   }
+   .myslider3 img
+   {
+    width: 100%;
+    height: 110vh;
+   } */
+   /* @keyframes fade1 {
+    0%
+    {
+        opacity: 1;
+    }
+    25%
+    {
+        opacity: 0;
+    }
+    75%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+    
+}
+@keyframes fade2 {
+    0%
+    {
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: 1;
+    }
+    75%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+    
+}
+@keyframes fade3 {
+    0%
+    {
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: 0;
+    }
+    75%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+    
+}  */
+   
+   /* .dot-box
+   {
+       position: absolute;
+       left: 50%;
+       transform: translate(-50%);
+       bottom: 20px;
+       cursor: pointer;
+   }
+   .dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px  solid #ffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+
+   }
+   .fade
+   {
+      -webkit-animation-name: fade1;
+      -webkit-animation-duration: 2s;
+      animation-name: fade1;
+      animation-duration: 1.5s;
+   }
+   @-webkit-keyframes fade1{
+
+    from{opacity: 0.8}
+    to{opacity: 1}
+
+   }
+   @keyframes fade1
+   {
+    from{opacity: 0.8;}
+    to{opacity: 1;}
+
+   } */
+   /* .text
+   {
+       position: absolute;
+       color: #ffff;
+       letter-spacing: 2px;
+       line-height: 35px;
+       top: 30%;
+       right: 15%;
+       -webkit-animation-name: pos1;
+      -webkit-animation-duration: 2s;
+      animation-name: pos1;
+      animation-duration: 1.5s;
+       
+   }
+   @-webkit-keyframes pos1{
+
+    from{right: 25%;}
+    to{right: 15%;}
+
+   }
+   @keyframes pos1
+   {
+    from{right: 25%;}
+    to{right: 15%;}
+
+   }
+   .text h2{
+       color: #349cdb;
+       font-weight: bold;
+       margin: 24px;
+   }
+   .text p
+   {
+       font-weight: bold;
+       font-size: 20px;
+   } */
+   /* .myslider1
+   {
+    animation: fade1 15s infinite;
+   }
+   .myslider2
+   {
+    animation: fade2 15s infinite;
+   }
+   .myslider3
+   {
+    animation: fade3 15s infinite;
+   } */
+
+   /* .my-slider img
+   {
+       transform: scale(1.5,1.5);
+       -webkit-animation-name: zoomin;
+      -webkit-animation-duration: 40s;
+      animation-name: zoomin;
+      animation-duration: 40s;
+   }
+   @-webkit-keyframes zoomin{
+
+     from{transform: scale(1 ,1);}
+     to{transform: scale(1.5,1.5);} 
+   }
+   @keyframes zoomin
+   {
+    from{transform: scale(1 ,1);}
+    to{transform: scale(1.5,1.5);} 
+
+   } */
