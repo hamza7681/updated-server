@@ -1,11 +1,9 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
 const generateToken = require("../config/generateToken");
-const { findOneAndUpdate } = require("../models/userModel");
+const Feedback = require("../models/feedbackModel");
+const Contact = require("../models/ContactSchema");
 
-//@description     Get or Search all users
-//@route           GET /api/user?search=
-//@access          Public
 const allUsers = asyncHandler(async (req, res) => {
   const keyword = req.query.search
     ? {
@@ -20,9 +18,6 @@ const allUsers = asyncHandler(async (req, res) => {
   res.send(users);
 });
 
-//@description     Register new user
-//@route           POST /api/user/
-//@access          Public
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password, pic, username, role, contact, gender } =
     req.body;
@@ -60,7 +55,6 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (user) {
     res.status(201).json({
-      msg: "User registered successfully",
       _id: user._id,
       name: user.name,
       email: user.email,
@@ -78,9 +72,6 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
-//@description     Auth the user
-//@route           POST /api/users/login
-//@access          Public
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -88,7 +79,6 @@ const authUser = asyncHandler(async (req, res) => {
 
   if (user && (await user.matchPassword(password))) {
     res.json({
-      msg: "Login Successfully",
       _id: user._id,
       name: user.name,
       email: user.email,
@@ -108,6 +98,92 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
+const feedbackUser = async (req, res) => {
+  const { name, email, feedback } = req.body;
+  if (!name || !email || !feedback) {
+    return res.status(400).json({ msg: "Please enter the missing fields" });
+  }
+  const feedbackUsers = await Feedback.create({
+    name,
+    email,
+    feedback,
+  });
+  if (feedbackUsers) {
+    return res.status(200).json({ msg: "Thanks for your feedback...!!! " });
+  } else {
+    return res.status(400).json({ msg: "Something Wrong!" });
+  }
+};
 
+const getFeedbacks = async (req, res) => {
+  const allFeedbacks = await Feedback.find();
+  res.json(allFeedbacks);
+};
 
-module.exports = { allUsers, registerUser, authUser };
+const contactUs = async (req, res) => {
+  const { name, email, phone, mainMessage } = req.body;
+  if (!name || !email || !phone || !mainMessage) {
+    return res.status(400).json({ msg: "Please enter the missing fields" });
+  }
+  const contactUsers = await Contact.create({
+    name,
+    email,
+    phone,
+    mainMessage,
+  });
+  if (contactUsers) {
+    return res.status(200).json({ msg: "Thanks for contacting us...!!! " });
+  } else {
+    return res.status(400).json({ msg: "Something Wrong!" });
+  }
+};
+
+const getContactus = async (req, res) => {
+  const getContacts = await Contact.find();
+  res.json(getContacts);
+};
+
+const getAllusers = async (req, res) => {
+  const allusers = await User.find().select("-password");
+  res.json(allusers);
+};
+
+const getTeachers = async (req, res) => {
+  const teachers = await User.find({ role: "teacher" }).select("-password");
+  res.json(teachers);
+};
+
+const getStudents = async (req, res) => {
+  const students = await User.find({ role: "student" }).select("-password");
+  res.json(students);
+};
+
+const updateProfile = async (req, res) => {
+  const { id, qualification, desc, name, contact } = req.body;
+  await User.findOneAndUpdate(
+    { _id: id },
+    { qualification, desc, name, contact }
+  );
+  res.status(200).json({ msg: "Profile has been updated successfully" });
+};
+
+const deleteProfile = async (req, res) => {
+  const { id } = req.body;
+  await User.findOneAndDelete({ _id: id });
+  res.status(200).json({ msg: "Profile Deleted" });
+};
+
+module.exports = {
+  allUsers,
+  registerUser,
+  authUser,
+  feedbackUser,
+  getFeedbacks,
+  contactUs,
+  getContactus,
+  getAllusers,
+  getTeachers,
+  getStudents,
+  updateProfile,
+  deleteProfile
+};

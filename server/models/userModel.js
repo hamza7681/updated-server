@@ -9,8 +9,8 @@ const userSchema = mongoose.Schema(
     role: { type: "String", required: true },
     contact: { type: "Number", required: true },
     password: { type: "String", required: true },
-    qualification: { type: "String" },
-    desc: { type: "String" },
+    qualification: { type: "String", default: "" },
+    desc: { type: "String", default: "" },
     pic: {
       type: "String",
       required: true,
